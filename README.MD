@@ -48,64 +48,83 @@ stock-forecasting-prophet/
 ├── notebooks/ # Analysis scripts
 └── README.md # Documentation
 
-
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
-```bash
+1️⃣ Clone the repository
+
 git clone https://github.com/virrajkkulkarni/Equity-price-Prediction-and-Risk-analysis-dashboard
 cd Equity-price-Prediction-and-Risk-analysis-dashboard
+
 2️⃣ Install dependencies
 pip install -r requirements.txt
+
 3️⃣ Run the application
 streamlit run app/app.py
-📊 How It Works
-1. Data Collection
-Historical stock data fetched using yFinance
-2. Data Preparation
-Cleaned and structured into Prophet format (ds, y)
-Time-based train-test split applied
-3. Forecasting
 
+
+## 📊 How It Works
+
+### 1. Data Collection
+- Historical stock data fetched using yFinance  
+
+### 2. Data Preparation
+- Cleaned and structured into Prophet format (`ds`, `y`)  
+- Time-based train-test split applied  
+
+### 3. Forecasting
 Prophet models:
+- Trend  
+- Weekly seasonality  
+- Yearly seasonality  
 
-Trend
-Weekly seasonality
-Yearly seasonality
-4. Model Evaluation
-MAE (Mean Absolute Error)
-RMSE (Root Mean Squared Error)
-5. Strategy Simulation
-Trading signals generated using predicted vs actual prices
-Lookahead bias avoided using .shift(1)
-6. Performance Evaluation
-Sharpe Ratio → risk-adjusted returns
-CAGR → annual growth rate
-Maximum Drawdown → downside risk
-📈 Key Visualizations
-Actual vs Predicted Prices
-Strategy vs Market Performance
-Forecast with Confidence Intervals
-Trend & Seasonality Components
-⚠️ Disclaimer
-This project is for educational purposes only
-Prophet is not suitable for high-frequency trading
-The trading strategy is simplified and not production-ready
-Financial markets are influenced by external macro factors not included in this model
-🧠 Key Learnings
-Time-series forecasting using Prophet
-Importance of proper validation in financial data
-Avoiding lookahead bias in strategy design
-Translating ML predictions into trading decisions
-Evaluating strategies using financial metrics
-🔮 Future Improvements
-Portfolio-level optimization
-Advanced trading strategies
-Feature engineering (technical indicators)
-Hyperparameter tuning
-Risk-adjusted capital allocation
+### 4. Model Evaluation
+- MAE (Mean Absolute Error)  
+- RMSE (Root Mean Squared Error)  
+
+### 5. Strategy Simulation
+- Trading signals generated using predicted vs actual prices  
+- Lookahead bias avoided using `.shift(1)`  
+
+### 6. Performance Evaluation
+- Sharpe Ratio → risk-adjusted returns  
+- CAGR → annual growth rate  
+- Maximum Drawdown → downside risk  
+
+---
+
+## 📈 Key Visualizations
+- Actual vs Predicted Prices  
+- Strategy vs Market Performance  
+- Forecast with Confidence Intervals  
+- Trend & Seasonality Components  
+
+---
+
+## ⚠️ Disclaimer
+- This project is for educational purposes only  
+- Prophet is not suitable for high-frequency trading  
+- The trading strategy is simplified and not production-ready  
+- Financial markets are influenced by external macro factors not included in this model  
+
+---
+
+## 🧠 Key Learnings
+- Time-series forecasting using Prophet  
+- Importance of proper validation in financial data  
+- Avoiding lookahead bias in strategy design  
+- Translating ML predictions into trading decisions  
+- Evaluating strategies using financial metrics  
+
+---
+
+## 🔮 Future Improvements
+- Portfolio-level optimization  
+- Advanced trading strategies  
+- Feature engineering (technical indicators)  
+- Hyperparameter tuning  
+- Risk-adjusted capital allocation  
 👨‍💻 Author
 
 Viraj Kulkarni
