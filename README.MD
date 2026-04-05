@@ -52,16 +52,16 @@ stock-forecasting-prophet/
 
 ## ⚙️ Installation & Setup
 
-1️⃣ Clone the repository
+###1️⃣ Clone the repository
 
 git clone https://github.com/virrajkkulkarni/Equity-price-Prediction-and-Risk-analysis-dashboard
 cd Equity-price-Prediction-and-Risk-analysis-dashboard
 
-2️⃣ Install dependencies
-pip install -r requirements.txt
+###2️⃣ Install dependencies
+-pip install -r requirements.txt
 
-3️⃣ Run the application
-streamlit run app/app.py
+###3️⃣ Run the application
+-streamlit run app/app.py
 
 
 ## 📊 How It Works
