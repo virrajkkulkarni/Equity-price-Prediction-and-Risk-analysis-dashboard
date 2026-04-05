@@ -11,7 +11,8 @@ import plotly.graph_objects as go
 # App Configuration
 # -------------------------------
 st.set_page_config(
-    page_title="Equity Price Prediction and Risk analysis Dashboard",
+    page_title="Equity Price Prediction and R" \
+    "isk analysis Dashboard",
     layout="centered"
 )
 
@@ -149,7 +150,7 @@ strategy_df['cum_strategy'] = (1 + strategy_df['strategy_returns']).cumprod()
 
 n_days = len(strategy_df)
 cagr   = (strategy_df['cum_strategy'].iloc[-1]) ** (252 / n_days) - 1
-st.write(f"CAGR: {cagr:.2%}")
+
 
 sharpe = (
     (strategy_df['strategy_returns'].mean() / strategy_df['strategy_returns'].std()) * np.sqrt(252)
@@ -163,6 +164,7 @@ max_drawdown = ((cum - rolling_max) / rolling_max).min()
 st.subheader("📊 Strategy Performance")
 st.write(f"Sharpe Ratio: {sharpe:.2f}")
 st.write(f"Max Drawdown: {max_drawdown:.2%}")
+st.write(f"CAGR: {cagr:.2%}")
 
 fig_perf = go.Figure()
 fig_perf.add_trace(go.Scatter(x=strategy_df['ds'], y=strategy_df['cum_market'],   name="Market Return"))
